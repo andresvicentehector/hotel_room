@@ -1,0 +1,222 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "_price",
+						"type": "uint8"
+					}
+				],
+				"name": "newSnackAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint32",
+						"name": "_quantity",
+						"type": "uint32"
+					}
+				],
+				"name": "snackRestocked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint32",
+						"name": "_quantity",
+						"type": "uint32"
+					}
+				],
+				"name": "snackSold",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_quantity",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_price",
+						"type": "uint8"
+					}
+				],
+				"name": "addNewSnack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "_id",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_amount",
+						"type": "uint32"
+					}
+				],
+				"name": "buySnack",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStock",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint32",
+								"name": "id",
+								"type": "uint32"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint32",
+								"name": "amount_snack",
+								"type": "uint32"
+							},
+							{
+								"internalType": "uint16",
+								"name": "price_eth",
+								"type": "uint16"
+							}
+						],
+						"internalType": "struct VendingMachine.Snack[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "_snackId",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "_amount",
+						"type": "uint32"
+					}
+				],
+				"name": "restoreSnack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/vending_machine.sol": "VendingMachine"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/vending_machine.sol": {
+			"keccak256": "0x08dadda4e2a9db03b4c1451a2cb73cd81859905cee6bf5b8dfe602c5979142ac",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://82994ff84ada7badcd781ea0c2fa3547a1feebf636f867538d71e3d83b8713d3",
+				"dweb:/ipfs/Qmb6gpGQbtsj6BkgjPiti4MHLE5xDrqRQfFRXynBDno1ut"
+			]
+		}
+	},
+	"version": 1
+}
